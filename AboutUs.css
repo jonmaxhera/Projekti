@@ -1,0 +1,162 @@
+/* Reset some default styles */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        height: 75vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url(design.png); /* Replace with your image path */
+        background-size: cover; /* Scale the image to cover the entire background */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        background-attachment: fixed; /* Keep the background fixed when scrolling */
+    }
+    
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit; /* Inherit the background from the body */
+        background-size: inherit; /* Match the background size */
+        background-position: inherit; /* Match the background position */
+        background-repeat: inherit; /* Match the background repeat behavior */
+        background-attachment: inherit; /* Inherit attachment */
+        filter: blur(3px); /* Apply blur to the background image */
+        background-color: rgba(0, 0, 0, 0.9); /* Black overlay with 40% opacity */
+        z-index: -1; /* Ensure it’s behind the content */
+    }
+    
+    footer {
+        color: #fff;
+        text-align: center;
+        font-size: 13px;
+        padding: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    /* Navigation Bar */
+    nav {
+        background-color: rgba(59, 89, 152, 0.8); /* Semi-transparent background */
+        padding: 10px 30px; /* Reduced padding for a smaller height */
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(5px); /* Slight blur effect for smooth integration */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for separation */
+    }
+    
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: auto;
+        height: 60px; /* Adjusted height */
+    }
+    
+    .nav-logo {
+        font-size: 34px; /* Adjusted logo font size */
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-logo .logo-img {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 20px; /* Adjusted space between the links */
+    }
+    
+    .nav-links li {
+        list-style: none;
+    }
+    
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold; /* Increased font-weight for bolder text */
+        font-size: 16px;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links li a .nav-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px; /* Space between icon and text */
+    }
+    
+    .nav-links li a:hover {
+        background-color: rgba(45, 67, 115, 0.9); /* Darker hover effect with transparency */
+        opacity: 1; /* Full opacity on hover */
+    }
+    
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .nav-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .nav-links {
+            flex-direction: column;
+            width: 100%;
+        }
+    
+        .nav-links li a {
+            width: 100%;
+            text-align: left;
+            padding: 15px 25px;
+        }
+    }
+    
+    /* About Us Section */
+    .about-us-section {
+        max-width: 800px;
+        margin: 80px auto;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    .about-box {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .about-box h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .about-box p {
+        font-size: 18px;
+        color: #555;
+        line-height: 1.6;
+    }
+    
