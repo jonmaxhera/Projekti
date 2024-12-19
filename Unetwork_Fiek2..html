@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unetwork</title>
+    <link rel="stylesheet" href="Unetwork_Fiek2.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <!-- Logo -->
+          <div class="nav-logo">
+            <img src="vogel.png" alt="Logo" class="logo-img"> Unetwork
+          </div>
+          <ul class="nav-links">
+            <li><a href="#" onclick="redirectHome()"><img src="home-icon.png" alt="Home" class="nav-icon"> Home</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact"><img src="envelope-icon.png" alt="Contact" class="nav-icon"> Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="button-container">
+        <div class="hover-card">
+            <button class="custom-button" onmouseenter="showOverlay(this)" onmouseleave="hideOverlay(this)">Button 1</button>
+            <div class="overlay">
+                <!-- Dropdowns inside the overlay -->
+                <div class="overlay-content">
+                    <select class="dropdown">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <select class="dropdown">
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                        <option value="optionC">Option C</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="hover-card">
+            <button class="custom-button" onmouseenter="showOverlay(this)" onmouseleave="hideOverlay(this)">Button 2</button>
+            <div class="overlay">
+                <!-- Dropdowns inside the overlay -->
+                <div class="overlay-content">
+                    <select class="dropdown">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <select class="dropdown">
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                        <option value="optionC">Option C</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="hover-card">
+            <button class="custom-button" onmouseenter="showOverlay(this)" onmouseleave="hideOverlay(this)">Button 3</button>
+            <div class="overlay">
+                <!-- Dropdowns inside the overlay -->
+                <div class="overlay-content">
+                    <select class="dropdown">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <select class="dropdown">
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                        <option value="optionC">Option C</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="hover-card">
+            <button class="custom-button" onmouseenter="showOverlay(this)" onmouseleave="hideOverlay(this)">Button 4</button>
+            <div class="overlay">
+                <!-- Dropdowns inside the overlay -->
+                <div class="overlay-content">
+                    <select class="dropdown">
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <select class="dropdown">
+                        <option value="optionA">Option A</option>
+                        <option value="optionB">Option B</option>
+                        <option value="optionC">Option C</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Unetwork | All rights reserved</p>
+    </footer>
+    
+    <script>
+        function redirectHome() {
+            window.location.href = 'http://127.0.0.1:5500/Unetwork/Unetwork.html'; // Replace with your target URL or path
+        }
+    </script>
+    <script>
+    // Show modal on hover
+    function openModal() {
+        document.getElementById("modal").style.display = "flex"; // Show the modal as a flexbox for centering
+    }
+    </script>
+    <script>
+    // Close modal
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+  </script>
+    
+</body>
+</html>
