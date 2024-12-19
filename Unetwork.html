@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unetwork</title>
+    <link rel="stylesheet" href="Unetwork.css">
+</head>
+<body>
+    <header>
+        <img src="gold2.png"  class="logo">
+        <div class="dropdown-container">
+            <select id="menu-select" onchange="redirectPage()">
+                <option value="">Zgjedh Fakultetin:</option>
+                <option value="http://127.0.0.1:5500/Unetwork/Unetwork_FIEK.html">FIEK</option>
+                <option value="https://fim.uni-pr.edu/">FIM</option>
+                <option value="https://fin.uni-pr.edu/desk/inc/media/A87466FB-3EBE-4A1F-9F77-9E5515A6F9D3.pdf">FIN</option>
+                <option value="https://mjekesia.uni-pr.edu/">MJEKSI</option>
+            </select>
+        </div>
+    </header>
+ 
+ 
+    <footer>
+        <p>&copy; 2024 Unetwork | All rights reserved</p>
+    </footer>
+    
+    <script>
+        function redirectPage() {
+            var selectedValue = document.getElementById('menu-select').value;
+            if (selectedValue) {
+                // Add a delay of 2 seconds (2000 milliseconds) before redirecting
+                setTimeout(function() {
+                    window.location.href = selectedValue;  // Redirect to the selected URL
+                }, 500); // Adjust the time as needed
+            }
+        }
+    </script>
+</body>
+</html>
