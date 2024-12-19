@@ -1,27 +1,26 @@
 /* Reset some default styles */
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: Arial, sans-serif;
-        height: 75vh; /* Full viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 75vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-image: url(design.png); /* Replace with your image path */
     background-size: cover; /* Scale the image to cover the entire background */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the background fixed when scrolling */
+}
 
-    }
-    body::before {
-        content: "";
+body::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -35,24 +34,25 @@
     filter: blur(3px); /* Apply blur to the background image */
     background-color: rgba(0, 0, 0, 0.9); /* Black overlay with 40% opacity */
     z-index: -1; /* Ensure it’s behind the content */
-    }
-    
-    footer {
-        color: #fff;
-        text-align: center;
-        font-size: 13px;
-        padding: 10px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-    .logo{
-        width: 450px;
-        height: 350px;
-        background-color: rgb(255, 255, 255,0.3);
-    }
-    
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    width: 450px;
+    height: 350px;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
 /* Navigation Bar */
 nav {
     background-color: rgba(59, 89, 152, 0.8); /* Semi-transparent background */
@@ -138,11 +138,12 @@ nav {
         padding: 15px 25px;
     }
 }
+
 /* Button Container */
 .button-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-    gap: 179px;
+    gap: 50px;
     justify-content: center;
     align-items: center;
     max-width: 60%;
@@ -163,6 +164,11 @@ nav {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+
+.custom-button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
 /* Hover Card Style */
 .hover-card {
     position: relative;
@@ -204,27 +210,50 @@ nav {
     border: none;
     border-radius: 8px; /* Round edges for iframe */
 }
+
 /* Style for the overlay container */
 .overlay-content {
     display: flex;
+    flex-direction: column;
     gap: 20px; /* Space between the dropdowns */
     justify-content: center;
     align-items: center;
     margin-bottom: 20px; /* Add space below the dropdowns */
+    color: #fff;
+    font-size: 18px;
 }
 
-/* Style for the dropdowns */
-.dropdown {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
+dropdown-wrapper {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dropdown-toggle {
+    background-color: #3b5998;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255,0.8);
-    color: #333;
     cursor: pointer;
-    transition: border-color 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.dropdown:hover {
-    border-color: rgba(59, 89, 152, 0.8); /* Change border color on hover */
+.dropdown-content {
+    display: none;
+    background-color: rgba(59, 89, 152, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.dropdown-content p {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.dropdown-content.active {
+    display: block;
 }
