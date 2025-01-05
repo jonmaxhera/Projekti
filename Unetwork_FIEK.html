@@ -9,21 +9,22 @@
 <body>
     <nav>
         <div class="nav-wrapper">
-          <!-- The Logo -->
+          <!-- Logo -->
           <div class="nav-logo">
             <img src="vogel.png" alt="Logo" class="logo-img"> Unetwork
           </div>
           <ul class="nav-links">
-            <li><a href="#" onclick="redirectHome()"><img src="home-icon.png" alt="Home" class="nav-icon"> Home</a></li>
-              <li><a href="#" onclick="redirectAboutUs()">About Us</a></li>
-            <li><a href="#contact"><img src="envelope-icon.png" alt="Contact" class="nav-icon"> Contact</a></li>
+            <li><a href="#" onclick="redirectHome()"><img src="HomeP.png" alt="Home" class="nav-icon"> Home</a></li>
+            <li><a href="#" onclick="redirectAboutUs()">About Us</a></li>
+
+            <li><a href="Contact.html"> Contact</a></li>
           </ul>
         </div>
       </nav>
 
       <div class="login-container">
         <h2>Log in to Unetwork</h2>
-        <form>
+        <form id="login-form" onsubmit="redirectToPage(event)">
             <input type="text" placeholder="Email" required>
             <input type="password" placeholder="Password" required>
             <button type="submit" class="login-button">Log in</button>
@@ -63,8 +64,14 @@
 }
 
     </script>
+    <script>
+        function redirectToPage(event) {
+            // Prevent the form from submitting and refreshing the page
+            event.preventDefault();
 
-
-    
+            // Redirect to another page after login
+            window.location.href = "Unetwork_Fiek2..html"; // Replace with your desired redirect URL
+        }
+    </script>
 </body>
 </html>
