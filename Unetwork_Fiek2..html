@@ -13,49 +13,28 @@
                 <img src="vogel.png" alt="Logo" class="logo-img"> Unetwork
             </div>
             <ul class="nav-links">
-                <li><a href="#" onclick="redirectHome()"><img src="home-icon.png" alt="Home" class="nav-icon"> Home</a></li>
+                <li><a href="#" onclick="redirectHome()"><img src="HomeP.png" alt="Home" class="nav-icon"> Home</a></li>
                 <li><a href="AboutUs.html">About Us</a></li>
-                <li><a href="#contact"><img src="envelope-icon.png" alt="Contact" class="nav-icon"> Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="button-container">
         <div class="hover-card">
-            <button class="custom-button" onclick="toggleDropdown('dropdown1')">IKS</button>
-            <div id="dropdown1" class="dropdown-content">
-                <a href="viti1.html"><p>Viti 1</p></a>
-                <a href="viti2.html"><p>Viti 2</p></a>
-                <a href="viti3.html"><p>Viti 3</p></a>
-            </div>
+            <button class="custom-button">IKS</button>
         </div>
         <div class="hover-card">
-            <button class="custom-button" onclick="toggleDropdown('dropdown2')">TIK</button>
-            <div id="dropdown2" class="dropdown-content">
-                <a href="viti1.html"><p>Viti 1</p></a>
-                <a href="viti2.html"><p>Viti 2</p></a>
-                <a href="viti3.html"><p>Viti 3</p></a>
-            </div>
+            <button class="custom-button">TIK</button>
         </div>
         <div class="hover-card">
-            <button class="custom-button" onclick="toggleDropdown('dropdown3')">EAR</button>
-            <div id="dropdown3" class="dropdown-content">
-                <a href="viti1.html"><p>Viti 1</p></a>
-                <a href="viti2.html"><p>Viti 2</p></a>
-                <a href="viti3.html"><p>Viti 3</p></a>
-            </div>
+            <button class="custom-button">EAR</button>
         </div>
         <div class="hover-card">
-            <button class="custom-button" onclick="toggleDropdown('dropdown4')">EEN</button>
-            <div id="dropdown4" class="dropdown-content">
-                <a href="viti1.html"><p>Viti 1</p></a>
-                <a href="viti2.html"><p>Viti 2</p></a>
-                <a href="viti3.html"><p>Viti 3</p></a>
-            </div>
+            <button class="custom-button">EEN</button>
         </div>
     </div>
     
-
     <footer>
         <p>&copy; 2024 Unetwork | All rights reserved</p>
     </footer>
@@ -63,11 +42,6 @@
     <script>
         function redirectHome() {
             window.location.href = 'http://127.0.0.1:5500/Unetwork/Unetwork.html';
-        }
-
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-            dropdown.classList.toggle('active');
         }
     </script>
 </body>
