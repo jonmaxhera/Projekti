@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unetwork</title>
     <link rel="stylesheet" href="Unetwork.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -20,7 +22,7 @@
         </div>
     </header>
  
- //Footer all rights reserved copyright
+ 
     <footer>
         <p>&copy; 2024 Unetwork | All rights reserved</p>
     </footer>
@@ -32,9 +34,71 @@
                 // Add a delay of 2 seconds (2000 milliseconds) before redirecting
                 setTimeout(function() {
                     window.location.href = selectedValue;  // Redirect to the selected URL
-                }, 430); // Adjust the time as needed
+                }, 500); // Adjust the time as needed
             }
         }
     </script>
+    <script>
+        $(document).ready(function () {
+            // jQuery Selectors
+            $('header').css('border', '1px solid #ccc'); // Add a light border around the header
+            $('.dropdown-container select').css('font-weight', 'bold'); // Bold font for dropdown text
+            
+            // jQuery Events
+            $('#menu-select').on('change', function () {
+                alert('You selected: ' + $(this).find(':selected').text()); // Alert when an option is selected
+            });
+            
+            $('footer').hover(
+                function () {
+                    $(this).css('background-color', '#444'); // Change background color on hover
+                },
+                function () {
+                    $(this).css('background-color', ''); // Reset background color
+                }
+            );
+
+            // jQuery Effects (Hide, Show)
+            $('header').on('dblclick', function () {
+                $(this).hide(500).show(500); // Header hides and reappears on double click
+            });
+
+            // jQuery Effects (Fade, Slide)
+            $('img.logo').on('click', function () {
+                $(this).fadeOut(300).fadeIn(300); // Fade logo out and back in on click
+            });
+
+            // Enlarging Dropdown on Hover
+            $('.dropdown-container').hover(
+                function () {
+                    $(this).animate(
+                        { width: '250px', height: 'auto' }, // Enlarge the dropdown width
+                        300
+                    );
+                },
+                function () {
+                    $(this).animate(
+                        { width: '200px', height: 'auto' }, // Shrink it back to original size
+                        300
+                    );
+                }
+            );
+
+            // jQuery Effects (Callback)
+            $('.logo').on('click', function () {
+                $(this).animate(
+                    { width: '200px' }, // Temporarily expand logo width
+                    500,
+                    function () {
+                        alert('Animation complete!'); // Notify when the animation is done
+                    }
+                ).animate({ width: '100px' }, 500); // Return to original size
+            });
+
+            // jQuery HTML Manipulation (Get, Set)
+            console.log('Footer text:', $('footer p').text()); // Get footer text and log it
+        });
+    </script>
 </body>
+
 </html>
