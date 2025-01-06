@@ -153,3 +153,16 @@
         width: 100%;
         color: #fff;
     }
+    /* Ensure form can be dragged */
+#contact-container {
+    cursor: grab; /* Visual cue for drag */
+    transition: top 0.2s ease, left 0.2s ease;
+}
+
+#contact-container:active {
+    cursor: grabbing; /* Visual cue when actively dragging */
+}
+
+form {
+    position: relative;
+}
