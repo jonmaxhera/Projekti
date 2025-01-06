@@ -35,6 +35,24 @@
             background-color: #e3f2fd; /* Light yellow background for CFO */
             border-radius: 5px;
         }
+
+        /* Customizing bullet points */
+        ul {
+            list-style-type: square; /* Square bullets */
+        }
+
+        ol {
+            list-style-type: decimal; /* Ordered list (numbers) */
+        }
+
+        li {
+            padding-left: 15px;
+        }
+
+        /* Nested list styling */
+        ul ul {
+            list-style-type: circle; /* Nested list with circle bullets */
+        }
     </style>
 </head>
 <body>
@@ -75,12 +93,23 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding: 15px; background-color: #f9f9f9;">Easy Access</td>
-                    <td style="padding: 15px; background-color: #f9f9f9;">Efficient Search Engine</td>
-                </tr>
-                <tr>
-                    <td style="padding: 15px; background-color: #f9f9f9;">Time Saving</td>
-                    <td style="padding: 15px; background-color: #f9f9f9;">Reduced Stress</td>
+                    <td style="padding: 15px; background-color: #f9f9f9;">
+                        <ol>
+                            <li>Easy Access</li>
+                            <li>Efficient Search Engine</li>
+                        </ol>
+                    </td>
+                    <td style="padding: 15px; background-color: #f9f9f9;">
+                        <ul>
+                            <li>Time Saving</li>
+                            <li>No Stress
+                                <ul>
+                                    <li>Helps manage time</li>
+                                    <li>Minimizes effort</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -96,6 +125,12 @@
                     <h3>Flon Kastrati</h3>
                 </a>
                 <p class="CEO">CEO</p> <!-- Added CEO class here -->
+                <!-- Adding email with abbreviation -->
+                <address>
+                    Contact: <a href="mailto:flon.kastrati@example.com">
+                        <abbr title="flon.kastrati@example.com">flon.kastrati@gmail.com</abbr>
+                    </a>
+                </address>
             </div>
             <div class="founder">
                 <a href="https://www.linkedin.com/in/jon-maxhera-ab0b912a4/" target="_blank">
@@ -103,6 +138,12 @@
                     <h3>Jon Maxhera</h3>
                 </a>
                 <p class="CTO">CTO</p> <!-- Added CTO class here -->
+                <!-- Adding email with abbreviation -->
+                <address>
+                    Contact: <a href="mailto:jon.maxhera@example.com">
+                        <abbr title="jon.maxhera@example.com">jon.maxhera@gmail.com</abbr>
+                    </a>
+                </address>
             </div>
             <div class="founder">
                 <a href="https://www.linkedin.com/in/fion-islami-6a119129b/" target="_blank">
@@ -110,6 +151,12 @@
                     <h3>Fion Islami</h3>
                 </a>
                 <p class="CFO">CFO</p> <!-- Added CFO class here -->
+                <!-- Adding email with abbreviation -->
+                <address>
+                    Contact: <a href="mailto:fion.islami@example.com">
+                        <abbr title="fion.islami@example.com">fion.islami@gmail.com</abbr>
+                    </a>
+                </address>
             </div>
         </div>
     </div>
