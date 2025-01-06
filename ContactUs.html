@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Unetwork</title>
-    <link rel="stylesheet" href="contact.css"> 
+    <link rel="stylesheet" href="Contact.css"> 
     <link rel="stylesheet" href="/projekti/indexp.css">
 </head>
 <body>
     <nav>
         <div class="nav-wrapper">
-            
             <div class="nav-logo">
-                <img src="/unetwork.png" alt="Logo" class="logo-img"> Unetwork
+                <img src="vogel.png" alt="Logo" class="logo-img"> Unetwork
             </div>
             <ul class="nav-links">
                 <li><a href="#" onclick="redirectHome()">Home</a></li>
@@ -22,9 +21,9 @@
         </div>
     </nav>
 
-    <div class="contact-container">
+    <div id="contact-container" class="contact-container" onmousedown="startDrag(event)" onmouseup="stopDrag()" onmousemove="dragMove(event)">
         <h2>Contact Us</h2>
-        <form action="submit_form.php" method="POST">
+        <form id="contact-form" action="submit_form.php" method="POST">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Full Name" required>
@@ -37,7 +36,7 @@
                 <label for="message">Your Message</label>
                 <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
-            <button type="submit" class="submit-button">Send Message</button>
+            <button type="submit" class="submit-button" onclick="enableDrag(event)">Send Message</button>
         </form>
     </div>
 
@@ -46,6 +45,11 @@
     </footer>
 
     <script>
+        let isDragging = false;
+        let offsetX = 0;
+        let offsetY = 0;
+        let formElement;
+
         function redirectHome() {
             window.location.href = 'Unetwork.html'; 
         }
@@ -53,6 +57,34 @@
         function redirectAboutUs() {
             window.location.href = 'AboutUs.html';
         }
+
+        function startDrag(event) {
+            // Initialize drag process
+            isDragging = true;
+            formElement = document.getElementById('contact-container');
+            
+            // Calculate initial offset from the cursor to the top-left corner of the form
+            offsetX = event.clientX - formElement.offsetLeft;
+            offsetY = event.clientY - formElement.offsetTop;
+
+            // Prevent any text selection during drag
+            event.preventDefault();
+        }
+
+        function stopDrag() {
+            // End dragging
+            isDragging = false;
+        }
+
+        function dragMove(event) {
+            if (isDragging) {
+                // Move the form based on mouse movement while dragging
+                formElement.style.position = 'absolute';
+                formElement.style.left = (event.clientX - offsetX) + 'px';
+                formElement.style.top = (event.clientY - offsetY) + 'px';
+            }
+        }
+
     </script>
 </body>
 </html>
