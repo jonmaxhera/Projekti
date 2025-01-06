@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Unetwork</title>
+    <link rel="stylesheet" href="signup.css">
+    <!-- Inline JS for some initial functions -->
+    <script>
+        // Function to show warning on the page
+        function showWarning(message) {
+            alert(message);
+        }
+
+        // Check the form before submission
+        function validateSignUp(event) {
+            event.preventDefault();  // Prevent form from submitting initially
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const age = document.getElementById('age').value;
+            
+            // Validate email
+            if (!validateEmail(email)) {
+                showWarning("Please enter a valid email.");
+                return;
+            }
+
+            // Validate password
+            if (!validatePassword(password)) {
+                showWarning("Password must be at least 6 characters.");
+                return;
+            }
+
+            // Check if passwords match
+            if (password !== confirmPassword) {
+                showWarning("Passwords do not match.");
+                return;
+            }
+
+            // Validate age
+            if (!validateAge(age)) {
+                showWarning("You must be at least 18 years old.");
+                return;
+            }
+
+            // If all validation passes, show success message
+            alert("Account created successfully!");
+        }
+
+        // Email validation function
+        function validateEmail(email) {
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return emailRegex.test(email);
+        }
+
+        // Password validation function
+        function validatePassword(password) {
+            return password.length >= 6;
+        }
+
+        // Age validation function
+        function validateAge(age) {
+            return !isNaN(age) && age >= 18;
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="vogel.png" alt="Logo" class="logo-img"> Unetwork
+            </div>
+            <ul class="nav-links">
+                <li><a href="Unetwork.html" onclick="redirectHome()">Home</a></li>
+                <li><a href="AboutUs.html" onclick="redirectAboutUs()">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sign-up-container">
+        <h2>Create a New Account</h2>
+        <form id="sign-up-form" onsubmit="validateSignUp(event)">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <input type="number" id="age" placeholder="Age" required>
+            <button type="submit" class="sign-up-button">Create Account</button>
+        </form>
+        <div class="login-prompt">
+            <p>Already have an account? <a href="login.html">Log in</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Unetwork | All rights reserved</p>
+    </footer>
+
+    <!-- External JS for extra functionality -->
+    <script src="script.js"></script>
+</body>
+</html>
