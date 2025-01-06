@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unetwork</title>
     <link rel="stylesheet" href="aboutus.css">
+    <style>
+        /* Style to highlight CEO, CTO, and CFO */
+        .founder p {
+            font-weight: normal; /* Set default weight */
+            color: #333; /* Set default color */
+            background-color: transparent; /* Default background */
+            padding: 5px;
+        }
+
+        /* Highlighting styles */
+        .founder p.CEO {
+            color: #007bff; /* Blue color for CEO */
+            font-weight: bold;
+            background-color: #e3f2fd; /* Light blue background for CEO */
+            border-radius: 5px;
+        }
+
+        .founder p.CTO {
+            color: #28a745; /* Green color for CTO */
+            font-weight: bold;
+            background-color: #e8f5e9; /* Light green background for CTO */
+            border-radius: 5px;
+        }
+
+        .founder p.CFO {
+            color: #ffc107; /* Yellow color for CFO */
+            font-weight: bold;
+            background-color: #fff3cd; /* Light yellow background for CFO */
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -64,21 +95,21 @@
                     <img src="IMG_1341.jpeg" alt="Founder 1" class="founder-img">
                     <h3>Flon Kastrati</h3>
                 </a>
-                <p>CEO</p>
+                <p class="CEO">CEO</p> <!-- Added CEO class here -->
             </div>
             <div class="founder">
                 <a href="https://www.linkedin.com/in/jon-maxhera-ab0b912a4/" target="_blank">
                     <img src="img.png" alt="Founder 2" class="founder-img">
                     <h3>Jon Maxhera</h3>
                 </a>
-                <p>CTO</p>
+                <p class="CTO">CTO</p> <!-- Added CTO class here -->
             </div>
             <div class="founder">
                 <a href="https://www.linkedin.com/in/fion-islami-6a119129b/" target="_blank">
                     <img src="IMG_1348.jpeg" alt="Founder 3" class="founder-img">
                     <h3>Fion Islami</h3>
                 </a>
-                <p>CFO</p>
+                <p class="CFO">CFO</p> <!-- Added CFO class here -->
             </div>
         </div>
     </div>
