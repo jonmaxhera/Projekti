@@ -15,14 +15,14 @@
             <ul class="nav-links">
                 <li><a href="#" onclick="redirectHome()"><img src="HomeP.png" alt="Home" class="nav-icon"> Home</a></li>
                 <li><a href="AboutUs.html">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="Contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="button-container">
         <div class="hover-card">
-            <button class="custom-button">IKS</button>
+            <button class="custom-button" onclick="redirectIKS()">IKS</button>
         </div>
         <div class="hover-card">
             <button class="custom-button">TIK</button>
@@ -44,5 +44,11 @@
             window.location.href = 'http://127.0.0.1:5500/Unetwork/Unetwork.html';
         }
     </script>
+    <script>
+           function redirectIKS() {
+            window.location.href = "test.html";  
+        }
+    </script>
+
 </body>
 </html>
