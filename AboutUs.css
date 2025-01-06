@@ -1,4 +1,4 @@
-
+/* General Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -113,25 +113,6 @@ nav {
     opacity: 1; 
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .nav-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links li a {
-        width: 100%;
-        text-align: left;
-        padding: 15px 25px;
-    }
-}
-
 /* About Us Section */
 .about-us-section {
     max-width: 800px;
@@ -218,4 +199,58 @@ nav {
     color: #0824c7; 
     padding: 0 20px 20px; 
     font-weight: bold; 
+}
+
+/* Stylish Table */
+table {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #fafafa;
+    color: #555;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+td:hover {
+    background-color: #e2e2e2;
+    transition: background-color 0.3s ease;
+}
+
+table td[colspan="2"] {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Responsive Design for Tables */
+@media screen and (max-width: 768px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+    }
 }
