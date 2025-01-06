@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Materials Access</title>
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <!-- Logo -->
+          <div class="nav-logo">
+            <img src="vogel.png" alt="Logo" class="logo-img"> Unetwork
+          </div>
+          <ul class="nav-links">
+            <li><a href="#" onclick="redirectHome()"><img src="HomeP.png" alt="Home" class="nav-icon"> Home</a></li>
+            <li><a href="#" onclick="redirectAboutUs()">About Us</a></li>
+
+            <li><a href="Contact.html"> Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+<!-- Year Selection Section -->
+<section id="year-selection">
+    <h2>Zgjedh vitin e studimeve</h2>
+    <div class="year-buttons">
+        <button onclick="showDropdown('year1')">Viti 1</button>
+        <button onclick="showDropdown('year2')">Viti 2</button>
+        <button onclick="showDropdown('year3')">Viti 3</button>
+    </div>
+    <div id="year1" class="year-dropdown" style="display:none;">
+        <select onchange="showMaterials()">
+            <option value="">Zgjedh lëndën</option>
+            <option value="class1">Algjeber Lineare</option>
+            <option value="class2">Bazat e inxh. Elektrike</option>
+            <option value="class3">Bazat e Programimit</option>
+        </select>
+    </div>
+    <div id="year2" class="year-dropdown" style="display:none;">
+        <select onchange="showMaterials()">
+            <option value="">Zgjedh lëndën</option>
+            <option value="class1">Web 1</option>
+            <option value="class2">Matematikë 3k</option>
+            <option value="class3">OOP</option>
+        </select>
+    </div>
+    <div id="year3" class="year-dropdown" style="display:none;">
+        <select onchange="showMaterials()">
+            <option value="">Zgjedh lëndën</option>
+            <option value="class1">KNK</option>
+            <option value="class2">Mikroprocesor dhe Mikrokontroller</option>
+            <option value="class3">Inteligjencë Artificiale</option>
+        </select>
+    </div>
+</section>
+
+<!-- Existing Section -->
+<section id="material1" style="display:none;">
+    <h2>Materiali nga lënda</h2>
+    <div class="mat-container">
+        <div class="mat">
+            <img src="Provimi-14.02.2022-Gr-B.JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="mat">
+            <img src="Provimi-14.02.2022-Gr-B.JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div><div class="mat">
+            <img src="Provimi-14.02.2022-Gr-B.JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div><div class="mat">
+            <img src="Provimi-14.02.2022-Gr-B.JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div><div class="mat">
+            <img src="Provimi-14.02.2022-Gr-B.JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div><div class="mat">
+            <img src="Provimi-14.02.2022-Gr-B.JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div><div class="mat">
+            <img src="Provimi-18.10.2021.JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="mat">
+            <img src="K3-21.01.2022-Gr-B(1).JPG" alt="" onclick="expandImg(this)">
+            <div class="description">
+                <h5>Kalkulus 2 2024</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>&copy; 2024 Unetwork | All rights reserved</p>
+</footer>
+<!-- Modal for image expand -->
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+</div>
+
+<script>
+    function showDropdown(year) {
+        // Hide all dropdowns
+        document.getElementById('year1').style.display = 'none';
+        document.getElementById('year2').style.display = 'none';
+        document.getElementById('year3').style.display = 'none';
+        // Show the selected dropdown
+        document.getElementById(year).style.display = 'block';
+    
+        // Remove the 'clicked' class from all buttons
+        var buttons = document.querySelectorAll('.year-buttons button');
+        buttons.forEach(function(button) {
+            button.classList.remove('clicked');
+        });
+    
+        // Add the 'clicked' class to the clicked button
+        var clickedButton = document.querySelector('.year-buttons button[onclick="showDropdown(\'' + year + '\')"]');
+        clickedButton.classList.add('clicked');
+    }
+    
+    function showMaterials() {
+        var selectElements = document.querySelectorAll('select');
+        var show = false;
+        selectElements.forEach(function(select) {
+            if (select.value !== "") {
+                show = true;
+            }
+        });
+        if (show) {
+            document.getElementById('material1').style.display = 'block';
+        } else {
+            document.getElementById('material1').style.display = 'none';
+        }
+    }
+    
+    function expandImg(img) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+    
+    var span = document.getElementsByClassName("close")[0];
+    
+    span.onclick = function() { 
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+    </script>
+    
+
+</body>
+</html>
