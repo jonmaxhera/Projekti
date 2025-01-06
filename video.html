@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <link rel="stylesheet" href="video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <div class="nav-logo">
+                <img src="vogel.png" alt="Logo" class="logo-img"> Unetwork
+            </div>
+            <ul class="nav-links">
+                <li><a href="Unetwork.html"><img src="HomeP.png" alt="Home" class="nav-icon"> Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="Contact.html"> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Video and Audio Section -->
+    <section id="video-section">
+        <h2>Explore Our Educational Videos</h2>
+        <div class="video-container">
+            <article class="video-item">
+                <h3>Web Development Basics</h3>
+                <video controls>
+                    <source src="web-development.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <audio controls>
+                    <source src="web-development-audio.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+
+            <article class="video-item">
+                <h3>Introduction to AI</h3>
+                <video controls>
+                    <source src="ai-intro.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <audio controls>
+                    <source src="ai-intro-audio.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </article>
+        </div>
+    </section>
+
+    <!-- Form Section with HTML5 Elements -->
+    <section id="form-section">
+        <h2>Give Feedback on Videos</h2>
+        <form action="#" method="post">
+            <label for="video-topic">Select Video Topic:</label>
+            <input list="video-selection" name="video-topic" id="video-topic" autocomplete="on">
+            <datalist id="video-selection">
+                <option value="Web Development">
+                <option value="Artificial Intelligence">
+                <option value="Machine Learning">
+                <option value="Data Science">
+            </datalist>
+            <br><br>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" autocomplete="on" required>
+            <br><br>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Write your feedback here"></textarea>
+            <br><br>
+
+            <label for="rating">Rate the Video (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5">
+            <br><br>
+
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            <br><br>
+
+            <label for="subscribe">Subscribe to Unetwork:</label>
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <br><br>
+
+            <output id="rating-output"></output>
+            <br><br>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Unetwork | All rights reserved</p>
+    </footer>
+
+    <script>
+        // Display rating output dynamically
+        document.getElementById('rating').addEventListener('input', function() {
+            document.getElementById('rating-output').textContent = 'You rated this video: ' + this.value + '/5';
+        });
+    </script>
+
+</body>
+</html>
