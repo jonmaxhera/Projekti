@@ -1,4 +1,4 @@
-/* General Reset and Base Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -105,7 +105,7 @@ nav {
 .nav-links li a .nav-icon {
     width: 20px;
     height: 20px;
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 5px; 
 }
 
 .nav-links li a:hover {
@@ -201,7 +201,7 @@ nav {
     font-weight: bold; 
 }
 
-/* Stylish Table */
+
 table {
     width: 100%;
     border: 2px solid #ddd;
@@ -243,7 +243,7 @@ table td[colspan="2"] {
     text-align: center;
 }
 
-/* Responsive Design for Tables */
+
 @media screen and (max-width: 768px) {
     table, th, td {
         display: block;
